@@ -1,18 +1,18 @@
 ### API Documentation
 
-We will start our project by first documenting all of the routes and data models for our API. Following best practices we will use _verbs_ to specify the type of operation being done and _nouns_ when naming endpoints.
+We will start our customer by first documenting all of the routes and data models for our API. Following best practices we will use _verbs_ to specify the type of operation being done and _nouns_ when naming endpoints.
 
 #### Routes
 
-##### Project routes
+##### Customer routes
 
 | HTTP verb | URL                        | Request body | Action                        |
 | --------- | -------------------------- | ------------ | ----------------------------- |
-| GET       | `/api/projects`            | (empty)      | Returns all the projects      |
-| POST      | `/api/projects`            | JSON         | Adds a new project            |
-| GET       | `/api/projects/:projectId` | (empty)      | Returns the specified project |
-| PUT       | `/api/projects/:projectId` | JSON         | Edits the specified project   |
-| DELETE    | `/api/projects/:projectId` | (empty)      | Deletes the specified project |
+| GET       | `/api/customers`            | (empty)      | Returns all the customers      |
+| POST      | `/api/customers`            | JSON         | Adds a new customer            |
+| GET       | `/api/customers/:customerId` | (empty)      | Returns the specified customer |
+| PUT       | `/api/customers/:customerId` | JSON         | Edits the specified customer   |
+| DELETE    | `/api/customers/:customerId` | (empty)      | Deletes the specified customer |
 
 ##### Task routes
 
@@ -24,7 +24,7 @@ We will start our project by first documenting all of the routes and data models
 
 #### Models
 
-##### Project Model
+##### Customer Model
 
 ```js
 {
@@ -40,6 +40,6 @@ We will start our project by first documenting all of the routes and data models
 {
   title: String,
   description: String,
-  project: { type: Schema.Types.ObjectId, ref: 'Project' }
+  customer: { type: Schema.Types.ObjectId, ref: 'Customer' }
 }
 ```

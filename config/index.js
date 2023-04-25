@@ -17,11 +17,13 @@ module.exports = (app) => {
   // Services like heroku use something called a proxy and you need to add this to your server
   app.set("trust proxy", 1);
 
-  app.use(
-    cors({
-      origin: ["http://localhost:3000"],
-    })
-  );
+  // app.use(
+  //   cors({
+  //     origin: ["http://localhost:3000"],
+  //   })
+  // );
+
+  app.use(cors(true));
 
   // In development environment the app logs
   app.use(logger("dev"));
